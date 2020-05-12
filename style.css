@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+
+html * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #424242;
+  font-family: 'Oxygen', sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+.grid {
+  /* Configuração do Body como uma Grid: */
+  display: grid;
+  grid-template-rows: 10vh 80vh 10vh;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+main, footer {
+  /* Indico que os elementos main e footer devem começar na primeira linha e terminar na terceira linha, agrupando duas colunas */
+  grid-column: 1 / 3;
+}
+
+.center-vertical {
+  /* Classe usa flex-box para alinhar o conteúdo verticalmente na caixa que está contido */
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  padding: 10px 22px;
+}
+
+nav a {
+  color: #424242;
+  font-size: 22px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px 20px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  opacity: 0.7;
+}
+
+.main-index {
+  background-image: url("img/john-doe-1.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  align-items: flex-end;
+}
+
+.main-index h2 {
+  color: #fff;
+  background-color: rgba(0,0,0,0.5);
+  width: 100%;
+  padding: 22px;
+  text-align: right;
+}
+
+h2 > a {
+  color: orange;
+  font-size: 28px;
+  text-decoration: none;
+}
+
+h2 > a:hover {
+  text-decoration: line-through;
+}
+
+p > a {
+  color: orange;
+  text-decoration: none;
+}
+
+p > a:hover {
+  text-decoration: line-through;
+}
+
+.main-about,
+.main-music {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 22px;
+  padding: 22px;
+}
+
+.about-txt p,
+.music-txt p {
+  font-size: 48px;
+}
+
+footer {
+  border-top: 1px solid #ccc;
+  padding: 22px;
+}
